@@ -1,0 +1,10 @@
+with rankedSalaries as (
+    select Department.name as Department, Employee.name as Employee, salary as Salary, 
+    DENSE_RANK() OVER(PARTITION BY Department.id order by Salary desc) as rnk 
+    from Department join Employee on
+    Department.id = Employee.departmentId
+)
+
+select Department, Employee, Salary from rankedSalaries
+where rnk<4
+order by Department, Salary desc;
