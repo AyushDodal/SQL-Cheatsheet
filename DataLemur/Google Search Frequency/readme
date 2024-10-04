@@ -2,6 +2,3 @@ The following is a link to a famous SQL question asked by Google in their interv
 
 https://datalemur.com/questions/median-search-freq
 
-This is a practical situation where one has to keep in mind that the query will be run on terrabytes of data.
-
-Here are 2 solutions to this problem, both functional and mathematically accurate. However, solution 1 makes the use of multiple CTEs & window functions making it computationally expensive for large datasets.
