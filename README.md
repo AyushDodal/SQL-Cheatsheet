@@ -1,2 +1,2 @@
 # SQL-Problems
-Solutions to unique SQL questions on the internet
+Solutions to unique SQL questions on websites like DataLemur, LeetCode, HackerRank
