@@ -1,0 +1,4 @@
+Link to the problem : https://datalemur.com/questions/total-utilization-time
+
+
+Note : If using Postgresql, replace the DATEDIFF function with "EXTRACT(EPOCH FROM next_status_time - status_time) AS uptime_seconds"
