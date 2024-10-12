@@ -1,0 +1,7 @@
+
+
+with cte as (
+select user_id,datediff(second,max(case when action='page_load' then timestamp end),min(case when action='page_exit' then timestamp end)) as session_time
+from facebook_web_log
+group by user_id,cast(timestamp as date))
+select user_id,avg(cast(session_time as decimal)) from cte where session_time is not null group by user_id;
