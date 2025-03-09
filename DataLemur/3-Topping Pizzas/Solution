@@ -1,0 +1,7 @@
+select concat_ws(',', t1.topping_name, t2.topping_name, t3.topping_name) as pizza,
+t1.ingredient_cost + t2.ingredient_cost + t3.ingredient_cost as total_cost
+from pizza_toppings as t1 join pizza_toppings as t2 
+on t1.topping_name < t2.topping_name 
+join pizza_toppings as t3
+on t2.topping_name < t3.topping_name
+order by total_cost desc, t1.topping_name, t2.topping_name, t3.topping_name;
