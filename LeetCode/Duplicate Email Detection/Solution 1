@@ -1,0 +1,8 @@
+with cte as (
+
+    select email, count(email) as n from Person
+    group by email
+
+)
+select email as Email from cte
+where cte.n>1;
